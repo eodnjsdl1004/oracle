@@ -1,0 +1,15 @@
+select Employee_id as 사원번호, first_name || ' ' || last_name as 이름, hire_date as 입사일, salary as 급여 from employees;
+select  first_name || last_name as name from employees;
+select * from employees where department_id =50;
+select  first_name || ' ' || last_name as 이름, department_id as 부서번호, job_id as 직무ID from employees where department_id =50;
+select first_name || ' ' || last_name as 이름, salary as 급여, salary + 300 as 인상된급여 from employees;
+select first_name || ' ' || last_name as 이름, salary as 급여 from employees where salary > 10000;
+select first_name || ' ' || last_name as 이름, job_id as 직무 , commission_pct as 보너스율 from employees where commission_pct is not null;
+select first_name || ' ' || last_name as 이름,  hire_date as 입사일, salary as 급여 from employees where hire_Date Between '03/01/01' and '03/12/31';
+select first_name || ' ' || last_name as 이름,  hire_date as 입사일, salary as 급여 from employees where hire_Date like '03%';
+select first_name || ' ' || last_name as 이름, salary as 급여 from employees order by salary desc;
+select first_name || ' ' || last_name as 이름, salary as 급여 from employees where department_id =60 order by salary desc;
+select first_name || ' ' || last_name as 이름, job_id as 직무ID from employees where job_id = 'IT_PROG' or job_id = 'SA_MAN';
+select first_name || ' ' || last_name || '사원의 급여는' || salary || '입니다.' from employees where first_name ='Steven' and last_name ='King';
+select first_name || ' ' || last_name as 사원이름, job_id as 직무ID from employees where job_id Like '%MAN';
+select first_name || ' ' || last_name as 사원이름, job_id as 직무ID from employees where job_id Like '%MAN' order by job_id;
